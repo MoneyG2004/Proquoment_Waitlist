@@ -19,7 +19,7 @@ export default function WaitlistPage() {
     setLoading(true);
 
     const { error: insertError } = await supabase
-      .from("proquoment_waitlist")
+      .from("proquomentwaitlist")
       .insert([
         {
           full_name: fullName,
