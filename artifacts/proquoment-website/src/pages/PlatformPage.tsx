@@ -1,3 +1,5 @@
+import { Link } from "wouter";
+
 export default function PlatformPage() {
   return (
     <main className="pt-20 lg:pt-32">
@@ -16,12 +18,16 @@ export default function PlatformPage() {
               Build your industrial legacy with precision.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button className="w-full sm:w-auto bg-[#0f00da] text-white px-10 py-4 lg:py-5 rounded-full font-bold shadow-[0px_20px_40px_rgba(15,0,218,0.2)] hover:shadow-[0px_20px_40px_rgba(15,0,218,0.4)] transition-all">
-                Join Waitlist
-              </button>
-              <button className="w-full sm:w-auto border border-[#c6c4d9] px-10 py-4 lg:py-5 rounded-full font-bold hover:bg-[#eeeeee] transition-colors">
-                Book a call
-              </button>
+              <Link href="/waitlist">
+                <button className="w-full sm:w-auto bg-[#0f00da] text-white px-10 py-4 lg:py-5 rounded-full font-bold shadow-[0px_20px_40px_rgba(15,0,218,0.2)] hover:shadow-[0px_20px_40px_rgba(15,0,218,0.4)] transition-all">
+                  Join Waitlist
+                </button>
+              </Link>
+              <Link href="/waitlist">
+                <button className="w-full sm:w-auto border border-[#c6c4d9] px-10 py-4 lg:py-5 rounded-full font-bold hover:bg-[#eeeeee] transition-colors">
+                  Book a call
+                </button>
+              </Link>
             </div>
           </div>
           <div className="lg:col-span-6">
@@ -306,9 +312,11 @@ export default function PlatformPage() {
               placeholder="Enter your business email"
               type="email"
             />
-            <button className="w-full md:w-auto bg-white text-[#070099] px-8 lg:px-10 py-4 lg:py-5 rounded-full font-black text-sm lg:text-base whitespace-nowrap hover:bg-opacity-90 transition-colors">
-              Get Priority Access
-            </button>
+            <Link href="/waitlist">
+              <button className="w-full md:w-auto bg-white text-[#070099] px-8 lg:px-10 py-4 lg:py-5 rounded-full font-black text-sm lg:text-base whitespace-nowrap hover:bg-opacity-90 transition-colors">
+                Get Priority Access
+              </button>
+            </Link>
           </div>
         </div>
       </section>

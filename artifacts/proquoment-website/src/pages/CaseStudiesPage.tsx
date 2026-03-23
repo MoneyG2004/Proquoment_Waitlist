@@ -1,3 +1,5 @@
+import { Link } from "wouter";
+
 export default function CaseStudiesPage() {
   return (
     <main className="pt-32">
@@ -197,8 +199,12 @@ export default function CaseStudiesPage() {
           <h2 className="text-4xl md:text-5xl font-black text-[#060055] mb-8 leading-tight">Ready to see these numbers in your balance sheet?</h2>
           <p className="text-lg text-slate-600 mb-12">Our industrial sourcing engine is built for scale. Let's engineer your competitive advantage.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <button className="bg-[#060055] text-white px-10 py-4 rounded-full font-bold tracking-widest uppercase text-xs hover:scale-105 transition-all">Schedule a Consultation</button>
-            <button className="bg-transparent border-2 border-slate-200 text-[#060055] px-10 py-4 rounded-full font-bold tracking-widest uppercase text-xs hover:border-[#060055] transition-all">Join Waitlist</button>
+            <Link href="/waitlist">
+              <button className="bg-[#060055] text-white px-10 py-4 rounded-full font-bold tracking-widest uppercase text-xs hover:scale-105 transition-all">Schedule a Consultation</button>
+            </Link>
+            <Link href="/waitlist">
+              <button className="bg-transparent border-2 border-slate-200 text-[#060055] px-10 py-4 rounded-full font-bold tracking-widest uppercase text-xs hover:border-[#060055] transition-all">Join Waitlist</button>
+            </Link>
           </div>
         </div>
       </section>

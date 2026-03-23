@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .halftone-texture {
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23060055' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        .blue-gradient {
+            background: linear-gradient(135deg, #070099 0%, #0f00da 100%);
+        }
+        /* No-Line Rule: Removing standard borders in favor of tonal layering */
+        input, .form-card, .status-card, .radio-option {
+            border: none !important;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "surface-container-low": "#f3f3f3",
+                "on-tertiary-fixed": "#400100",
+                "surface-dim": "#dadada",
+                "outline": "#767588",
+                "surface-variant": "#e2e2e2",
+                "tertiary-fixed-dim": "#ffb4a7",
+                "surface-container-lowest": "#ffffff",
+                "on-background": "#1a1c1c",
+                "on-error-container": "#93000a",
+                "outline-variant": "#c6c4d9",
+                "surface": "#f9f9f9",
+                "on-secondary-container": "#c8c9ff",
+                "on-secondary": "#ffffff",
+                "on-surface-variant": "#454556",
+                "surface-container": "#eeeeee",
+                "error-container": "#ffdad6",
+                "surface-tint": "#3c40f5",
+                "inverse-primary": "#bfc1ff",
+                "on-tertiary-container": "#ff8c79",
+                "on-secondary-fixed-variant": "#1200ed",
+                "secondary": "#0f00d9",
+                "primary": "#070099",
+                "primary-container": "#0f00da",
+                "background": "#f9f9f9",
+                "primary-fixed": "#e1e0ff",
+                "on-error": "#ffffff",
+                "surface-bright": "#f9f9f9",
+                "primary-fixed-dim": "#bfc1ff",
+                "inverse-surface": "#2f3131",
+                "on-tertiary": "#ffffff",
+                "on-secondary-fixed": "#03006d",
+                "tertiary": "#5c0200",
+                "error": "#ba1a1a",
+                "surface-container-highest": "#e2e2e2",
+                "on-tertiary-fixed-variant": "#900f04",
+                "on-primary-fixed-variant": "#1c18df",
+                "secondary-fixed": "#e1e0ff",
+                "secondary-container": "#2c2cff",
+                "on-surface": "#1a1c1c",
+                "tertiary-fixed": "#ffdad4",
+                "surface-container-high": "#e8e8e8",
+                "inverse-on-surface": "#f1f1f1",
+                "on-primary": "#ffffff",
+                "on-primary-container": "#a0a4ff",
+                "on-primary-fixed": "#03006d",
+                "tertiary-container": "#860500",
+                "secondary-fixed-dim": "#bfc1ff"
+              },
+              fontFamily: {
+                "headline": ["Inter"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-background selection:bg-primary-container selection:text-white" data-mode="connect">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm">
+<div class="flex justify-between items-center w-full px-4 sm:px-8 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-2 sm:gap-3 text-xl sm:text-[22px] font-black tracking-tighter text-[#1C1C5E]">
+<img alt="Proquoment Logo" class="h-6 w-6 sm:h-7 sm:w-7 object-contain rounded-sm" src="https://lh3.googleusercontent.com/aida/ADBb0uipVQU2CrFCa6h1XPrOE2cE_U3GNlC5e35oKMQ9jUdF71oIptAI21uZoqGs8IDr3MdJ4n2zejjSmACLFF8943_3ud29A0kyq8yHYcBmTMqQva3iQTvM9izzzdA0NUZkd00NcEmMP6v-TcxbJ70IqcxVz63sU_Y95qYEWUEvBqvsF0tDdzjBhsMG-H4oqtf7HummQrj0M1VTUHbmcBBq6jXNu2w9TwNPSMx46CjAfpUwXQM-qOZ1Ch6o45NHwxVN8rrO8X4j36SewJI" style=""/>
+<span class="font-inter font-black tracking-[-0.05em]" style="">Proquoment</span>
+</div>
+<div class="hidden md:flex items-center gap-6 lg:gap-8">
+<a class="text-[#1C1C5E] font-extrabold border-b-2 border-[#1C1C5E] pb-1 font-inter tracking-[0.1em] text-[10px] uppercase" href="#" style="">Platform</a>
+<a class="text-slate-500 font-medium pb-1 font-inter tracking-[0.1em] text-[10px] uppercase hover:text-indigo-600 transition-colors duration-200" href="#" style="">Case Studies</a>
+<a class="text-slate-500 font-medium pb-1 font-inter tracking-[0.1em] text-[10px] uppercase hover:text-indigo-600 transition-colors duration-200" href="#" style="">Contact</a>
+</div>
+<button class="bg-primary text-white px-4 sm:px-6 py-2 rounded-full font-inter text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.1em] transition-transform hover:opacity-90 active:scale-95 whitespace-nowrap" style="">the waitlist</button>
+</div>
+</nav>
+<main class="pt-24 sm:pt-32">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-4 sm:px-8 mb-16 sm:mb-24 lg:mb-32 grid grid-cols-12 gap-8 halftone-texture pb-12 sm:pb-24">
+<div class="col-span-12 lg:col-span-9 text-center lg:text-left">
+<span class="text-primary font-bold tracking-[0.2em] text-[10px] sm:text-[12px] uppercase mb-4 sm:mb-6 block" style="">Industrial Revolution 4.0</span>
+<h1 class="text-[clamp(2.5rem,8vw,8rem)] leading-[0.9] sm:leading-[0.85] font-black tracking-[-0.04em] text-primary mb-8 sm:mb-12" style="">
+                THE NEW ERA OF PRECISION SOURCING
+            </h1>
+</div>
+<div class="col-span-12 lg:col-span-5 lg:col-start-8 flex flex-col items-center lg:items-start text-center lg:text-left">
+<p class="text-on-surface-variant text-base sm:text-lg leading-relaxed mb-6 sm:mb-8 max-w-xl" style="">
+                We are building a closed-loop ecosystem for high-precision manufacturing. Proquoment connects elite industrial buyers with verified facilities through an AI-governed protocol.
+            </p>
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>auto_awesome</span>
+<span class="font-inter tracking-[0.1em] text-[10px] sm:text-[11px] uppercase whitespace-nowrap" style="">500+ Verified Manufacturers</span>
+</div>
+</div>
+</section>
+<!-- Waitlist Form Section -->
+<section class="bg-[#EEEEEE] py-16 sm:py-24 lg:py-32">
+<div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-12 gap-8 lg:gap-12">
+<div class="col-span-12 lg:col-span-4 text-center lg:text-left mb-8 lg:mb-0">
+<h2 class="text-3xl sm:text-4xl font-black tracking-tighter text-primary mb-4 sm:mb-6 uppercase" style="">Secure Your Position</h2>
+<p class="text-on-surface-variant mb-8 sm:mb-12 max-w-lg mx-auto lg:mx-0" style="">Access is strictly controlled to maintain technical integrity and fulfillment speed. Join the cohort and get full one year of our $2,500 subscription completely free.</p>
+<div class="space-y-6 max-w-xs mx-auto lg:mx-0">
+<div class="status-card p-6 bg-white rounded-[12px] shadow-[0px_10px_30px_rgba(6,0,85,0.02)] text-left">
+<span class="text-primary block text-[10px] font-bold tracking-[0.1em] uppercase mb-2" style="">Network Status</span>
+<div class="text-2xl font-black text-primary" style="">92% Capacity</div>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-7 lg:col-start-6">
+<div class="form-card bg-white p-6 sm:p-10 lg:p-16 rounded-[12px] shadow-[0px_40px_80px_rgba(6,0,85,0.03)]">
+<form class="space-y-6 sm:space-y-8">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-[0.1em] text-outline block" style="">Full Name</label>
+<input class="w-full bg-[#F5F5F7] border-none rounded-[10px] px-4 py-3 focus:bg-[#EAEAEB] focus:ring-0 transition-colors placeholder:text-outline-variant/50" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-[0.1em] text-outline block" style="">Work Email</label>
+<input class="w-full bg-[#F5F5F7] border-none rounded-[10px] px-4 py-3 focus:bg-[#EAEAEB] focus:ring-0 transition-colors placeholder:text-outline-variant/50" placeholder="john@company.industrial" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-[0.1em] text-outline block" style="">Company Name</label>
+<input class="w-full bg-[#F5F5F7] border-none rounded-[10px] px-4 py-3 focus:bg-[#EAEAEB] focus:ring-0 transition-colors placeholder:text-outline-variant/50" placeholder="Advanced Robotics Ltd." type="text"/>
+</div>
+<div class="space-y-4">
+<label class="text-[10px] font-bold uppercase tracking-[0.1em] text-outline block" style="">Intent Profile</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<label class="radio-option flex items-center gap-4 p-4 bg-[#F5F5F7] rounded-[10px] cursor-pointer hover:bg-[#EAEAEB] transition-colors group" style="">
+<input class="text-primary focus:ring-0" name="intent" type="radio"/>
+<span class="text-sm font-semibold text-on-surface-variant group-hover:text-primary transition-colors" style="">Interested as Buyer</span>
+</label>
+<label class="radio-option flex items-center gap-4 p-4 bg-[#F5F5F7] rounded-[10px] cursor-pointer hover:bg-[#EAEAEB] transition-colors group" style="">
+<input class="text-primary focus:ring-0" name="intent" type="radio"/>
+<span class="text-sm font-semibold text-on-surface-variant group-hover:text-primary transition-colors" style="">Manufacturer</span>
+</label>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-4 rounded-full font-black uppercase tracking-[0.2em] text-[10px] sm:text-xs hover:shadow-xl transition-all" style="" type="submit">Submit Application</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface w-full py-12 sm:py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col lg:flex-row justify-between items-center lg:items-center gap-8 text-center lg:text-left">
+<div class="flex flex-col items-center lg:items-start">
+<div class="flex items-center gap-3 font-black text-[#1C1C5E] text-lg sm:text-xl mb-2">
+<img alt="Proquoment Logo" class="h-6 w-6 sm:h-7 sm:w-7 object-contain rounded-sm" src="https://lh3.googleusercontent.com/aida/ADBb0uipVQU2CrFCa6h1XPrOE2cE_U3GNlC5e35oKMQ9jUdF71oIptAI21uZoqGs8IDr3MdJ4n2zejjSmACLFF8943_3ud29A0kyq8yHYcBmTMqQva3iQTvM9izzzdA0NUZkd00NcEmMP6v-TcxbJ70IqcxVz63sU_Y95qYEWUEvBqvsF0tDdzjBhsMG-H4oqtf7HummQrj0M1VTUHbmcBBq6jXNu2w9TwNPSMx46CjAfpUwXQM-qOZ1Ch6o45NHwxVN8rrO8X4j36SewJI" style=""/>
+<span class="font-inter tracking-[-0.05em]" style="">Proquoment</span>
+</div>
+<p class="font-inter text-[10px] uppercase tracking-[0.1em] font-medium text-slate-500" style="">© 2026 Proquoment. all rights reserved</p>
+</div>
+<div class="flex flex-wrap justify-center gap-4 sm:gap-8">
+<a class="font-inter text-[10px] uppercase tracking-[0.1em] font-medium text-slate-500 hover:text-indigo-600 transition-opacity opacity-80 hover:opacity-100" href="#" style="">Terms</a>
+<a class="font-inter text-[10px] uppercase tracking-[0.1em] font-medium text-slate-500 hover:text-indigo-600 transition-opacity opacity-80 hover:opacity-100" href="#" style="">Privacy</a>
+<a class="font-inter text-[10px] uppercase tracking-[0.1em] font-medium text-slate-500 hover:text-indigo-600 transition-opacity opacity-80 hover:opacity-100" href="#" style="">Security</a>
+<a class="font-inter text-[10px] uppercase tracking-[0.1em] font-medium text-slate-500 hover:text-indigo-600 transition-opacity opacity-80 hover:opacity-100" href="#" style="">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

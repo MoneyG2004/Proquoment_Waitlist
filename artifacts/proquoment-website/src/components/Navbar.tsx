@@ -36,9 +36,11 @@ export default function Navbar() {
             );
           })}
         </div>
-        <button className="bg-[#060055] text-white px-5 lg:px-8 py-2 lg:py-2.5 rounded-full text-xs lg:text-sm font-bold hover:opacity-90 transition-all active:scale-95">
-          {location === "/contact" ? "Contact" : "Join Waitlist"}
-        </button>
+        <Link href="/waitlist">
+          <button className="bg-[#060055] text-white px-5 lg:px-8 py-2 lg:py-2.5 rounded-full text-xs lg:text-sm font-bold hover:opacity-90 transition-all active:scale-95">
+            Join Waitlist
+          </button>
+        </Link>
       </div>
     </nav>
   );

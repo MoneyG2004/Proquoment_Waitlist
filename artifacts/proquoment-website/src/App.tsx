@@ -5,22 +5,36 @@ import Footer from "@/components/Footer";
 import PlatformPage from "@/pages/PlatformPage";
 import CaseStudiesPage from "@/pages/CaseStudiesPage";
 import ContactPage from "@/pages/ContactPage";
+import WaitlistPage from "@/pages/WaitlistPage";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
 
-function Router() {
+function WithLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Navbar />
-      <Switch>
-        <Route path="/" component={PlatformPage} />
-        <Route path="/case-studies" component={CaseStudiesPage} />
-        <Route path="/contact" component={ContactPage} />
-        <Route component={NotFound} />
-      </Switch>
+      {children}
       <Footer />
     </>
+  );
+}
+
+function Router() {
+  return (
+    <Switch>
+      <Route path="/waitlist" component={WaitlistPage} />
+      <Route path="/">
+        <WithLayout><PlatformPage /></WithLayout>
+      </Route>
+      <Route path="/case-studies">
+        <WithLayout><CaseStudiesPage /></WithLayout>
+      </Route>
+      <Route path="/contact">
+        <WithLayout><ContactPage /></WithLayout>
+      </Route>
+      <Route component={NotFound} />
+    </Switch>
   );
 }
 
