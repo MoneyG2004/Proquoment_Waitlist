@@ -1,15 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
     <title>Proquoment Website</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
   </head>
+  <script>
+    const { createClient } = supabase;
+    const client = createClient(
+      "https://gbgkemtfsxhpxjvkmxes.supabase.co",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdiZ2tlbXRmc3hocHhqdmtteGVzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQxMDcwNjEsImV4cCI6MjA4OTY4MzA2MX0.C8qGhpoTSpprPXtNeUvdHA7IGkYO2L2Bo_0C2ttdSz8",
+    );
+
+    document
+      .getElementById("waitlist-form")
+      .addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const intent = document.querySelector('input[name="intent"]:checked');
+
+        const { error } = await client.from("proquomentwaitlist").insert([
+          {
+            full_name: document.getElementById("full-name").value,
+            work_email: document.getElementById("work-email").value,
+            company_name: document.getElementById("company-name").value,
+            intent_profile: intent ? intent.value : null,
+          },
+        ]);
+
+        if (error) {
+          alert("❌ Error: " + error.message);
+        } else {
+          alert("🎉 Application submitted!");
+          e.target.reset();
+        }
+      });
+  </script>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
