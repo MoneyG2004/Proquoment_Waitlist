@@ -1,15 +1,41 @@
 import { useState } from "react";
 import { Link } from "wouter";
+import { supabase } from "@/lib/supabase";
 
 const LOGO_URL = "https://lh3.googleusercontent.com/aida/ADBb0uipVQU2CrFCa6h1XPrOE2cE_U3GNlC5e35oKMQ9jUdF71oIptAI21uZoqGs8IDr3MdJ4n2zejjSmACLFF8943_3ud29A0kyq8yHYcBmTMqQva3iQTvM9izzzdA0NUZkd00NcEmMP6v-TcxbJ70IqcxVz63sU_Y95qYEWUEvBqvsF0tDdzjBhsMG-H4oqtf7HummQrj0M1VTUHbmcBBq6jXNu2w9TwNPSMx46CjAfpUwXQM-qOZ1Ch6o45NHwxVN8rrO8X4j36SewJI";
 
 export default function WaitlistPage() {
+  const [fullName, setFullName] = useState("");
+  const [workEmail, setWorkEmail] = useState("");
+  const [companyName, setCompanyName] = useState("");
   const [intent, setIntent] = useState<string>("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setError(null);
+    setLoading(true);
+
+    const { error: insertError } = await supabase
+      .from("proquoment_waitlist")
+      .insert([
+        {
+          full_name: fullName,
+          work_email: workEmail,
+          company_name: companyName,
+          intent_profile: intent,
+        },
+      ]);
+
+    setLoading(false);
+
+    if (insertError) {
+      setError("Something went wrong. Please try again.");
+    } else {
+      setSubmitted(true);
+    }
   }
 
   return (
@@ -83,9 +109,9 @@ export default function WaitlistPage() {
               <div className="bg-white p-6 sm:p-10 lg:p-16 rounded-[12px] shadow-[0px_40px_80px_rgba(6,0,85,0.03)]">
                 {submitted ? (
                   <div className="text-center py-12">
-                    <span className="material-symbols-outlined text-[#070099] text-6xl mb-4 block">check_circle</span>
-                    <h3 className="text-2xl font-black text-[#070099] mb-2">Application Submitted!</h3>
-                    <p className="text-[#454556]">We'll be in touch shortly with your access details.</p>
+                    <span className="material-symbols-outlined text-[#070099] text-6xl mb-4 block" style={{ fontVariationSettings: '"FILL" 1' }}>check_circle</span>
+                    <h3 className="text-2xl font-black text-[#070099] mb-3">Application Submitted!</h3>
+                    <p className="text-[#454556]">We'll review your application and be in touch shortly with your access details.</p>
                   </div>
                 ) : (
                   <form className="space-y-6 sm:space-y-8" onSubmit={handleSubmit}>
@@ -94,6 +120,8 @@ export default function WaitlistPage() {
                         <label className="text-[10px] font-bold uppercase tracking-[0.1em] text-[#767588] block">Full Name</label>
                         <input
                           required
+                          value={fullName}
+                          onChange={(e) => setFullName(e.target.value)}
                           className="w-full bg-[#F5F5F7] rounded-[10px] px-4 py-3 focus:bg-[#EAEAEB] focus:ring-0 focus:outline-none transition-colors placeholder-[#c6c4d9]/70 border-0"
                           placeholder="John Doe"
                           type="text"
@@ -103,6 +131,8 @@ export default function WaitlistPage() {
                         <label className="text-[10px] font-bold uppercase tracking-[0.1em] text-[#767588] block">Work Email</label>
                         <input
                           required
+                          value={workEmail}
+                          onChange={(e) => setWorkEmail(e.target.value)}
                           className="w-full bg-[#F5F5F7] rounded-[10px] px-4 py-3 focus:bg-[#EAEAEB] focus:ring-0 focus:outline-none transition-colors placeholder-[#c6c4d9]/70 border-0"
                           placeholder="john@company.industrial"
                           type="email"
@@ -113,6 +143,8 @@ export default function WaitlistPage() {
                       <label className="text-[10px] font-bold uppercase tracking-[0.1em] text-[#767588] block">Company Name</label>
                       <input
                         required
+                        value={companyName}
+                        onChange={(e) => setCompanyName(e.target.value)}
                         className="w-full bg-[#F5F5F7] rounded-[10px] px-4 py-3 focus:bg-[#EAEAEB] focus:ring-0 focus:outline-none transition-colors placeholder-[#c6c4d9]/70 border-0"
                         placeholder="Advanced Robotics Ltd."
                         type="text"
@@ -153,11 +185,27 @@ export default function WaitlistPage() {
                         </label>
                       </div>
                     </div>
+
+                    {error && (
+                      <p className="text-red-500 text-sm font-medium">{error}</p>
+                    )}
+
                     <button
                       type="submit"
-                      className="w-full bg-[#070099] text-white py-4 rounded-full font-black uppercase tracking-[0.2em] text-[10px] sm:text-xs hover:shadow-xl transition-all"
+                      disabled={loading}
+                      className="w-full bg-[#070099] text-white py-4 rounded-full font-black uppercase tracking-[0.2em] text-[10px] sm:text-xs hover:shadow-xl transition-all disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                     >
-                      Submit Application
+                      {loading ? (
+                        <>
+                          <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                          </svg>
+                          Submitting...
+                        </>
+                      ) : (
+                        "Submit Application"
+                      )}
                     </button>
                   </form>
                 )}
