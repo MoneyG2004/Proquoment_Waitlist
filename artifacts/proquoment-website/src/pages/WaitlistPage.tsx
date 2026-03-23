@@ -32,7 +32,8 @@ export default function WaitlistPage() {
     setLoading(false);
 
     if (insertError) {
-      setError("Something went wrong. Please try again.");
+      console.error("Supabase insert error:", JSON.stringify(insertError));
+      setError(insertError.message || "Something went wrong. Please try again.");
     } else {
       setSubmitted(true);
     }
