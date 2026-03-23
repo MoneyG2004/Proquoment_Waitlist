@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Proquoment | Global Product Sourcing. Automated.</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#ffdad4",
+              "secondary-fixed-dim": "#bfc1ff",
+              "tertiary-fixed-dim": "#ffb4a7",
+              "surface-container": "#eeeeee",
+              "secondary-container": "#2c2cff",
+              "on-surface-variant": "#454556",
+              "inverse-surface": "#2f3131",
+              "primary-fixed": "#e1e0ff",
+              "tertiary-container": "#860500",
+              "on-error": "#ffffff",
+              "surface-dim": "#dadada",
+              "surface-bright": "#f9f9f9",
+              "inverse-primary": "#bfc1ff",
+              "on-primary-fixed": "#03006d",
+              "surface-variant": "#e2e2e2",
+              "on-primary": "#ffffff",
+              "primary-container": "#0f00da",
+              "on-secondary-fixed": "#03006d",
+              "outline-variant": "#c6c4d9",
+              "on-tertiary-fixed-variant": "#900f04",
+              "on-secondary-fixed-variant": "#1200ed",
+              "on-secondary": "#ffffff",
+              "background": "#f9f9f9",
+              "error-container": "#ffdad6",
+              "on-primary-fixed-variant": "#1c18df",
+              "surface-tint": "#3c40f5",
+              "outline": "#767588",
+              "on-tertiary-container": "#ff8c79",
+              "surface-container-low": "#f3f3f3",
+              "on-background": "#1a1c1c",
+              "error": "#ba1a1a",
+              "inverse-on-surface": "#f1f1f1",
+              "surface-container-high": "#e8e8e8",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed-dim": "#bfc1ff",
+              "on-tertiary-fixed": "#400100",
+              "on-primary-container": "#a0a4ff",
+              "surface": "#f9f9f9",
+              "secondary-fixed": "#e1e0ff",
+              "on-tertiary": "#ffffff",
+              "on-surface": "#1a1c1c",
+              "on-secondary-container": "#c8c9ff",
+              "tertiary": "#5c0200",
+              "surface-container-highest": "#e2e2e2",
+              "secondary": "#0f00d9",
+              "primary": "#070099",
+              "on-error-container": "#93000a"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .halftone-texture {
+            background-image: radial-gradient(circle at center, #0f00da 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.05;
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}[type='text'],input:where(:not([type])),[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select{-webkit-appearance:none;appearance:none;background-color:#fff;border-color:#6b7280;border-width:1px;border-radius:0px;padding-top:0.5rem;padding-right:0.75rem;padding-bottom:0.5rem;padding-left:0.75rem;font-size:1rem;line-height:1.5rem;--tw-shadow:0 0 #0000;}[type='text']:focus, input:where(:not([type])):focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#2563eb;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);border-color:#2563eb}input::placeholder,textarea::placeholder{color:#6b7280;opacity:1}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-date-and-time-value{min-height:1.5em;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit,::-webkit-datetime-edit-year-field,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute-field,::-webkit-datetime-edit-second-field,::-webkit-datetime-edit-millisecond-field,::-webkit-datetime-edit-meridiem-field{padding-top:0;padding-bottom:0}select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");background-position:right 0.5rem center;background-repeat:no-repeat;background-size:1.5em 1.5em;padding-right:2.5rem;print-color-adjust:exact}[multiple],[size]:where(select:not([size="1"])){background-image:initial;background-position:initial;background-repeat:unset;background-size:initial;padding-right:0.75rem;print-color-adjust:unset}[type='checkbox'],[type='radio']{-webkit-appearance:none;appearance:none;padding:0;print-color-adjust:exact;display:inline-block;vertical-align:middle;background-origin:border-box;-webkit-user-select:none;user-select:none;flex-shrink:0;height:1rem;width:1rem;color:#2563eb;background-color:#fff;border-color:#6b7280;border-width:1px;--tw-shadow:0 0 #0000}[type='checkbox']{border-radius:0px}[type='radio']{border-radius:100%}[type='checkbox']:focus,[type='radio']:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:2px;--tw-ring-offset-color:#fff;--tw-ring-color:#2563eb;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}[type='checkbox']:checked,[type='radio']:checked{border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:center;background-repeat:no-repeat}[type='checkbox']:checked{background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");}@media (forced-colors: active) {[type='checkbox']:checked{-webkit-appearance:auto;appearance:auto}}[type='radio']:checked{background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");}@media (forced-colors: active) {[type='radio']:checked{-webkit-appearance:auto;appearance:auto}}[type='checkbox']:checked:hover,[type='checkbox']:checked:focus,[type='radio']:checked:hover,[type='radio']:checked:focus{border-color:transparent;background-color:currentColor}[type='checkbox']:indeterminate{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h8'/%3e%3c/svg%3e");border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:center;background-repeat:no-repeat;}@media (forced-colors: active) {[type='checkbox']:indeterminate{-webkit-appearance:auto;appearance:auto}}[type='checkbox']:indeterminate:hover,[type='checkbox']:indeterminate:focus{border-color:transparent;background-color:currentColor}[type='file']{background:unset;border-color:inherit;border-width:0;border-radius:0;padding:0;font-size:unset;line-height:inherit}[type='file']:focus{outline:1px solid ButtonText;outline:1px auto -webkit-focus-ring-color}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.-top-3{top:-0.75rem}.bottom-4{bottom:1rem}.left-4{left:1rem}.right-4{right:1rem}.top-0{top:0px}.z-10{z-index:10}.z-50{z-index:50}.order-1{order:1}.order-2{order:2}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-1{margin-top:0.25rem}.mt-auto{margin-top:auto}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.aspect-\[4\/5\]{aspect-ratio:4/5}.aspect-square{aspect-ratio:1 / 1}.h-10{height:2.5rem}.h-12{height:3rem}.h-4{height:1rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-full{height:100%}.w-10{width:2.5rem}.w-12{width:3rem}.w-4{width:1rem}.w-8{width:2rem}.w-auto{width:auto}.w-fit{width:-moz-fit-content;width:fit-content}.w-full{width:100%}.max-w-3xl{max-width:48rem}.max-w-\[1440px\]{max-width:1440px}.max-w-\[90\%\]{max-width:90%}.max-w-\[95\%\]{max-width:95%}.max-w-lg{max-width:32rem}.max-w-sm{max-width:24rem}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-10{gap:2.5rem}.gap-12{gap:3rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.self-end{align-self:flex-end}.overflow-hidden{overflow:hidden}.scroll-smooth{scroll-behavior:smooth}.whitespace-nowrap{white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-\[10px\]{border-radius:10px}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-sm{border-radius:0.125rem}.rounded-xl{border-radius:0.75rem}.rounded-tl-none{border-top-left-radius:0px}.rounded-tr-none{border-top-right-radius:0px}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-none{border-style:none}.border-outline{--tw-border-opacity:1;border-color:rgb(118 117 136 / var(--tw-border-opacity, 1))}.border-outline-variant{--tw-border-opacity:1;border-color:rgb(198 196 217 / var(--tw-border-opacity, 1))}.border-primary{--tw-border-opacity:1;border-color:rgb(7 0 153 / var(--tw-border-opacity, 1))}.border-surface-container{--tw-border-opacity:1;border-color:rgb(238 238 238 / var(--tw-border-opacity, 1))}.bg-\[\#0f00da\]{--tw-bg-opacity:1;background-color:rgb(15 0 218 / var(--tw-bg-opacity, 1))}.bg-background{--tw-bg-opacity:1;background-color:rgb(249 249 249 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-on-primary-fixed{--tw-bg-opacity:1;background-color:rgb(3 0 109 / var(--tw-bg-opacity, 1))}.bg-primary{--tw-bg-opacity:1;background-color:rgb(7 0 153 / var(--tw-bg-opacity, 1))}.bg-primary-container{--tw-bg-opacity:1;background-color:rgb(15 0 218 / var(--tw-bg-opacity, 1))}.bg-primary\/10{background-color:rgb(7 0 153 / 0.1)}.bg-primary\/5{background-color:rgb(7 0 153 / 0.05)}.bg-surface-bright{--tw-bg-opacity:1;background-color:rgb(249 249 249 / var(--tw-bg-opacity, 1))}.bg-surface-container{--tw-bg-opacity:1;background-color:rgb(238 238 238 / var(--tw-bg-opacity, 1))}.bg-surface-container-high{--tw-bg-opacity:1;background-color:rgb(232 232 232 / var(--tw-bg-opacity, 1))}.bg-surface-container-low{--tw-bg-opacity:1;background-color:rgb(243 243 243 / var(--tw-bg-opacity, 1))}.bg-surface-container-lowest{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/90{background-color:rgb(255 255 255 / 0.9)}.bg-zinc-100{--tw-bg-opacity:1;background-color:rgb(244 244 245 / var(--tw-bg-opacity, 1))}.bg-zinc-200{--tw-bg-opacity:1;background-color:rgb(228 228 231 / var(--tw-bg-opacity, 1))}.object-cover{object-fit:cover}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pt-20{padding-top:5rem}.text-center{text-align:center}.text-right{text-align:right}.font-body{font-family:Inter}.font-headline{font-family:Inter}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[10px\]{font-size:10px}.text-\[8px\]{font-size:8px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-\[1\.1\]{line-height:1.1}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-\[-0\.04em\]{letter-spacing:-0.04em}.tracking-\[0\.1em\]{letter-spacing:0.1em}.tracking-\[0\.2em\]{letter-spacing:0.2em}.tracking-tight{letter-spacing:-0.025em}.tracking-tighter{letter-spacing:-0.05em}.tracking-widest{letter-spacing:0.1em}.text-\[\#070099\]{--tw-text-opacity:1;color:rgb(7 0 153 / var(--tw-text-opacity, 1))}.text-on-background{--tw-text-opacity:1;color:rgb(26 28 28 / var(--tw-text-opacity, 1))}.text-on-primary-container{--tw-text-opacity:1;color:rgb(160 164 255 / var(--tw-text-opacity, 1))}.text-on-surface{--tw-text-opacity:1;color:rgb(26 28 28 / var(--tw-text-opacity, 1))}.text-on-surface-variant{--tw-text-opacity:1;color:rgb(69 69 86 / var(--tw-text-opacity, 1))}.text-outline{--tw-text-opacity:1;color:rgb(118 117 136 / var(--tw-text-opacity, 1))}.text-primary{--tw-text-opacity:1;color:rgb(7 0 153 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-zinc-500{--tw-text-opacity:1;color:rgb(113 113 122 / var(--tw-text-opacity, 1))}.underline-offset-4{text-underline-offset:4px}.\!opacity-10{opacity:0.1 !important}.shadow-\[0px_20px_40px_rgba\(15\2c 0\2c 218\2c 0\.04\)\]{--tw-shadow:0px 20px 40px rgba(15,0,218,0.04);--tw-shadow-colored:0px 20px 40px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[0px_20px_40px_rgba\(15\2c 0\2c 218\2c 0\.2\)\]{--tw-shadow:0px 20px 40px rgba(15,0,218,0.2);--tw-shadow-colored:0px 20px 40px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[0px_40px_80px_rgba\(15\2c 0\2c 218\2c 0\.08\)\]{--tw-shadow:0px 40px 80px rgba(15,0,218,0.08);--tw-shadow-colored:0px 40px 80px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.ring-8{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(8px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-background{--tw-ring-opacity:1;--tw-ring-color:rgb(249 249 249 / var(--tw-ring-opacity, 1))}.ring-primary-container{--tw-ring-opacity:1;--tw-ring-color:rgb(15 0 218 / var(--tw-ring-opacity, 1))}.grayscale{--tw-grayscale:grayscale(100%);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-shadow{transition-property:box-shadow;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-700{transition-duration:700ms}.selection\:bg-primary-container *::selection{--tw-bg-opacity:1;background-color:rgb(15 0 218 / var(--tw-bg-opacity, 1))}.selection\:text-on-primary-container *::selection{--tw-text-opacity:1;color:rgb(160 164 255 / var(--tw-text-opacity, 1))}.selection\:bg-primary-container::selection{--tw-bg-opacity:1;background-color:rgb(15 0 218 / var(--tw-bg-opacity, 1))}.selection\:text-on-primary-container::selection{--tw-text-opacity:1;color:rgb(160 164 255 / var(--tw-text-opacity, 1))}.hover\:scale-\[1\.02\]:hover{--tw-scale-x:1.02;--tw-scale-y:1.02;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-primary:hover{--tw-border-opacity:1;border-color:rgb(7 0 153 / var(--tw-border-opacity, 1))}.hover\:bg-primary:hover{--tw-bg-opacity:1;background-color:rgb(7 0 153 / var(--tw-bg-opacity, 1))}.hover\:bg-primary\/5:hover{background-color:rgb(7 0 153 / 0.05)}.hover\:bg-surface-container:hover{--tw-bg-opacity:1;background-color:rgb(238 238 238 / var(--tw-bg-opacity, 1))}.hover\:bg-white:hover{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.hover\:text-blue-600:hover{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.hover\:opacity-90:hover{opacity:0.9}.hover\:shadow-\[0px_20px_40px_rgba\(15\2c 0\2c 218\2c 0\.4\)\]:hover{--tw-shadow:0px 20px 40px rgba(15,0,218,0.4);--tw-shadow-colored:0px 20px 40px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:ring-4:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:border-primary{--tw-border-opacity:1;border-color:rgb(7 0 153 / var(--tw-border-opacity, 1))}.group:hover .group-hover\:bg-primary-container{--tw-bg-opacity:1;background-color:rgb(15 0 218 / var(--tw-bg-opacity, 1))}.group:hover .group-hover\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:grayscale-0{--tw-grayscale:grayscale(0);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.dark\:bg-zinc-800:is(.dark *){--tw-bg-opacity:1;background-color:rgb(39 39 42 / var(--tw-bg-opacity, 1))}.dark\:bg-zinc-900:is(.dark *){--tw-bg-opacity:1;background-color:rgb(24 24 27 / var(--tw-bg-opacity, 1))}.dark\:bg-zinc-950\/90:is(.dark *){background-color:rgb(9 9 11 / 0.9)}.dark\:text-blue-500:is(.dark *){--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.dark\:text-zinc-400:is(.dark *){--tw-text-opacity:1;color:rgb(161 161 170 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:w-auto{width:auto}.sm\:flex-row{flex-direction:row}}@media (min-width: 768px){.md\:flex{display:flex}.md\:w-auto{width:auto}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:items-start{align-items:flex-start}.md\:rounded-none{border-radius:0px}.md\:bg-transparent{background-color:transparent}.md\:p-0{padding:0px}.md\:text-left{text-align:left}.md\:shadow-none{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}}@media (min-width: 1024px){.lg\:left-6{left:1.5rem}.lg\:order-1{order:1}.lg\:order-2{order:2}.lg\:col-span-4{grid-column:span 4 / span 4}.lg\:col-span-6{grid-column:span 6 / span 6}.lg\:col-span-8{grid-column:span 8 / span 8}.lg\:mx-0{margin-left:0px;margin-right:0px}.lg\:mb-10{margin-bottom:2.5rem}.lg\:mb-12{margin-bottom:3rem}.lg\:mb-2{margin-bottom:0.5rem}.lg\:mb-20{margin-bottom:5rem}.lg\:mb-24{margin-bottom:6rem}.lg\:mb-4{margin-bottom:1rem}.lg\:mb-6{margin-bottom:1.5rem}.lg\:mb-8{margin-bottom:2rem}.lg\:grid{display:grid}.lg\:h-10{height:2.5rem}.lg\:h-12{height:3rem}.lg\:h-8{height:2rem}.lg\:h-9{height:2.25rem}.lg\:w-10{width:2.5rem}.lg\:w-12{width:3rem}.lg\:max-w-2xl{max-width:42rem}.lg\:max-w-\[80\%\]{max-width:80%}.lg\:max-w-\[85\%\]{max-width:85%}.lg\:max-w-none{max-width:none}.lg\:max-w-xl{max-width:36rem}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:flex-row{flex-direction:row}.lg\:items-start{align-items:flex-start}.lg\:justify-start{justify-content:flex-start}.lg\:gap-12{gap:3rem}.lg\:gap-16{gap:4rem}.lg\:gap-2{gap:0.5rem}.lg\:gap-20{gap:5rem}.lg\:gap-3{gap:0.75rem}.lg\:gap-4{gap:1rem}.lg\:gap-6{gap:1.5rem}.lg\:p-10{padding:2.5rem}.lg\:p-4{padding:1rem}.lg\:p-6{padding:1.5rem}.lg\:p-8{padding:2rem}.lg\:px-10{padding-left:2.5rem;padding-right:2.5rem}.lg\:px-12{padding-left:3rem;padding-right:3rem}.lg\:px-3{padding-left:0.75rem;padding-right:0.75rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:py-1{padding-top:0.25rem;padding-bottom:0.25rem}.lg\:py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.lg\:py-20{padding-top:5rem;padding-bottom:5rem}.lg\:py-32{padding-top:8rem;padding-bottom:8rem}.lg\:py-4{padding-top:1rem;padding-bottom:1rem}.lg\:py-5{padding-top:1.25rem;padding-bottom:1.25rem}.lg\:py-6{padding-top:1.5rem;padding-bottom:1.5rem}.lg\:pt-32{padding-top:8rem}.lg\:text-left{text-align:left}.lg\:text-right{text-align:right}.lg\:text-2xl{font-size:1.5rem;line-height:2rem}.lg\:text-3xl{font-size:1.875rem;line-height:2.25rem}.lg\:text-4xl{font-size:2.25rem;line-height:2.5rem}.lg\:text-7xl{font-size:4.5rem;line-height:1}.lg\:text-\[10px\]{font-size:10px}.lg\:text-\[3\.5rem\]{font-size:3.5rem}.lg\:text-base{font-size:1rem;line-height:1.5rem}.lg\:text-lg{font-size:1.125rem;line-height:1.75rem}.lg\:text-sm{font-size:0.875rem;line-height:1.25rem}.lg\:text-xl{font-size:1.25rem;line-height:1.75rem}.lg\:text-xs{font-size:0.75rem;line-height:1rem}}</style></head>
+<body class="bg-background font-body text-on-background selection:bg-primary-container selection:text-on-primary-container" data-mode="connect">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md">
+<div class="flex justify-between items-center px-6 lg:px-12 py-3 lg:py-4 w-full max-w-[1440px] mx-auto">
+<div class="flex items-center gap-2 lg:gap-3">
+<img alt="Proquoment Logo" class="h-8 lg:h-9 w-auto rounded-sm" src="https://lh3.googleusercontent.com/aida/ADBb0uipVQU2CrFCa6h1XPrOE2cE_U3GNlC5e35oKMQ9jUdF71oIptAI21uZoqGs8IDr3MdJ4n2zejjSmACLFF8943_3ud29A0kyq8yHYcBmTMqQva3iQTvM9izzzdA0NUZkd00NcEmMP6v-TcxbJ70IqcxVz63sU_Y95qYEWUEvBqvsF0tDdzjBhsMG-H4oqtf7HummQrj0M1VTUHbmcBBq6jXNu2w9TwNPSMx46CjAfpUwXQM-qOZ1Ch6o45NHwxVN8rrO8X4j36SewJI"/>
+<span class="text-xl lg:text-2xl font-black tracking-tighter text-[#070099] dark:text-blue-500 font-headline">Proquoment</span>
+</div>
+<div class="hidden md:flex gap-10"><a class="text-sm lg:text-base font-medium hover:text-primary transition-colors text-[#0f00da] border-b-2 border-[#0f00da] pb-1" href="#">Platform</a>
+<a class="text-sm lg:text-base font-medium text-on-surface hover:text-primary transition-colors" href="#">Case Studies</a>
+<a class="text-sm lg:text-base font-medium text-on-surface hover:text-primary transition-colors" href="#">Contact us</a></div>
+<div class="flex items-center gap-6">
+<button class="bg-[#0f00da] text-white px-5 lg:px-8 py-2 lg:py-2.5 rounded-full text-sm lg:text-base font-bold hover:opacity-90 transition-all active:scale-95">
+                Join Waitlist
+            </button>
+</div>
+</div>
+</nav>
+<main class="pt-20 lg:pt-32">
+<!-- Section 1: Hero -->
+<section class="relative px-6 lg:px-12 py-12 lg:py-20 max-w-[1440px] mx-auto overflow-hidden">
+<div class="absolute inset-0 halftone-texture pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 relative z-10">
+<div class="lg:col-span-6 flex flex-col justify-center text-center lg:text-left">
+<span class="text-primary font-bold tracking-[0.1em] uppercase text-[10px] lg:text-xs mb-4 lg:mb-6 block">Industrial Supply Chain Intelligence</span>
+<h1 class="text-4xl lg:text-[3.5rem] font-black leading-[1.1] tracking-[-0.04em] mb-6 lg:mb-8 text-on-background">
+                    Global Product <br/>Sourcing. Automated.
+                </h1>
+<p class="text-lg lg:text-xl text-on-surface-variant max-w-lg lg:max-w-none mb-8 lg:mb-10 leading-relaxed mx-auto lg:mx-0">
+                    Build your industrial legacy with precision.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+<button class="w-full sm:w-auto bg-primary-container text-white px-10 py-4 lg:py-5 rounded-full font-bold shadow-[0px_20px_40px_rgba(15,0,218,0.2)] hover:shadow-[0px_20px_40px_rgba(15,0,218,0.4)] transition-all">Join Waitlist</button>
+<button class="w-full sm:w-auto border border-outline-variant px-10 py-4 lg:py-5 rounded-full font-bold hover:bg-surface-container transition-colors">Book a call</button>
+</div>
+</div>
+<div class="lg:col-span-6">
+<div class="bg-surface-container-lowest p-6 lg:p-8 rounded-[10px] shadow-[0px_20px_40px_rgba(15,0,218,0.04)] relative">
+<div class="flex justify-between items-center mb-6 lg:mb-8">
+<h3 class="font-bold text-lg">Product Specification</h3>
+<span class="material-symbols-outlined text-primary" data-icon="settings">settings</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="rounded-lg overflow-hidden bg-surface-container-low aspect-[4/5] relative group">
+<img alt="Model in technical jacket" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmiuBKXCr81TX2vZdf2mWIMPD_Xv9eBxa6Dp0JPEbiI-HY2cD07XJLr_XXuZO0h76ddspgASfNmxFahEck3wPvFJyTbuF-I73fL1FssY1cVPWLgw1WHtdo8ojBDSgBkFhAmIsnG_X3cCpDXzHyxFUEPHBKymrIzR7qgFaNbGtyDzjcGI9Bg9pcl8ZGaNi4okYkRCSk19neKdolu-EmO3zF8e6gQ3oA8UCyqkCrcJUWmeaHyIex6zcyItKkHebx6GCOceD7HI0kqpdT"/>
+<div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur p-3 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="verified">verified</span>
+<span class="text-[10px] font-bold tracking-tight uppercase">V1 TECHNICAL SHELL</span>
+</div>
+</div>
+<div class="flex flex-col gap-3 lg:gap-4">
+<div class="p-4 bg-surface-container-low rounded-lg">
+<p class="text-[10px] uppercase tracking-widest text-outline mb-1 lg:mb-2 font-bold">Primary Material</p>
+<div class="flex items-center justify-between">
+<span class="font-bold text-sm lg:text-base">Gore-Tex Pro</span>
+<span class="material-symbols-outlined text-xs text-primary" data-icon="check_circle" data-weight="fill">check_circle</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container-low rounded-lg">
+<p class="text-[10px] uppercase tracking-widest text-outline mb-1 lg:mb-2 font-bold">Coating</p>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-medium text-sm lg:text-base">DWR Finish</span>
+<span class="material-symbols-outlined text-xs" data-icon="add">add</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container-low rounded-lg">
+<p class="text-[10px] uppercase tracking-widest text-outline mb-1 lg:mb-2 font-bold">Seams</p>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-medium text-sm lg:text-base">Heat Taped</span>
+<span class="material-symbols-outlined text-xs" data-icon="add">add</span>
+</div>
+</div>
+<div class="mt-auto bg-primary-container p-4 rounded-lg text-white flex justify-between items-center cursor-pointer">
+<span class="font-bold text-sm lg:text-base">Generate BOM</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: AI Assistant Flow -->
+<section class="bg-surface-container py-16 lg:py-32 px-6 lg:px-12">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<div class="lg:col-span-6 order-2 lg:order-1">
+<div class="bg-surface-container-lowest rounded-[10px] overflow-hidden shadow-[0px_20px_40px_rgba(15,0,218,0.04)]">
+<div class="p-4 lg:p-6 bg-white border-b border-surface-container flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm" data-icon="bolt" data-weight="fill">bolt</span>
+</div>
+<span class="font-bold tracking-tight text-sm lg:text-base">Proquoment AI</span>
+</div>
+<div class="p-6 lg:p-8 flex flex-col gap-6">
+<!-- AI Messages -->
+<div class="flex gap-4 max-w-[90%] lg:max-w-[80%]">
+<div class="bg-surface-container p-4 lg:p-6 rounded-2xl rounded-tl-none text-sm lg:text-base leading-relaxed text-on-surface">
+                                Got it — men's black puffed jackets, 200 pieces.
+                            </div>
+</div>
+<div class="flex gap-4 max-w-[95%] lg:max-w-[85%]">
+<div class="bg-white border border-surface-container p-4 lg:p-6 rounded-2xl rounded-tl-none shadow-sm flex flex-col gap-4 w-full">
+<p class="text-sm lg:text-base text-on-surface font-medium leading-relaxed">
+                                    How warm do you want these jackets to be? This will determine the fill type and cost structure.
+                                </p>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-3 p-3 rounded-lg border border-outline-variant hover:border-primary hover:bg-primary/5 cursor-pointer transition-colors group">
+<div class="w-4 h-4 rounded-full border-2 border-outline group-hover:border-primary"></div>
+<span class="text-xs lg:text-sm font-semibold">Basic polyester fill</span>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-lg border border-outline-variant hover:border-primary hover:bg-primary/5 cursor-pointer transition-colors group">
+<div class="w-4 h-4 rounded-full border-2 border-outline group-hover:border-primary"></div>
+<span class="text-xs lg:text-sm font-semibold">Synthetic Down</span>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-lg border border-outline-variant hover:border-primary hover:bg-primary/5 cursor-pointer transition-colors group">
+<div class="w-4 h-4 rounded-full border-2 border-outline group-hover:border-primary"></div>
+<span class="text-xs lg:text-sm font-semibold">Technical Insulation</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex gap-4 self-end max-w-[90%]">
+<div class="bg-primary-container text-white p-4 lg:p-6 rounded-2xl rounded-tr-none text-sm lg:text-base font-medium leading-tight shadow-lg">
+                                synthetic fill (polyester)
+                            </div>
+</div>
+<div class="flex gap-4 max-w-[95%] lg:max-w-[85%] items-start">
+<div class="bg-surface-container p-4 lg:p-6 rounded-2xl rounded-tl-none flex items-center gap-3 lg:gap-4">
+<span class="material-symbols-outlined text-primary animate-pulse text-sm lg:text-base">auto_awesome</span>
+<div class="text-xs lg:text-base leading-relaxed text-primary font-medium italic">
+                                    Analyzing manufacturing hubs in Tirupur for polyester fill availability...
+                                </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 order-1 lg:order-2">
+<span class="text-primary font-bold tracking-[0.1em] uppercase text-[10px] lg:text-xs mb-3 lg:mb-4 block">Precision Interaction</span>
+<h2 class="text-3xl lg:text-4xl font-black tracking-tighter mb-4 lg:mb-6 leading-tight">
+                    How it works:<br/>End-to-end sourcing
+                </h2>
+<p class="text-base lg:text-lg text-on-surface-variant mb-8 lg:mb-10 leading-relaxed">
+                    Add your product details and let Proquoment handle the complexity. Our AI translates technical specs for global suppliers, ensuring nothing is lost in translation.
+                </p>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle" data-weight="fill">check_circle</span>
+<div>
+<h4 class="font-bold text-sm lg:text-base">Automated Specification Translation</h4>
+<p class="text-xs lg:text-sm text-outline mt-1">Precise conversion of technical requirements for international factories.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle" data-weight="fill">check_circle</span>
+<div>
+<h4 class="font-bold text-sm lg:text-base">Real-time Supply Chain Feedback</h4>
+<p class="text-xs lg:text-sm text-outline mt-1">Get immediate insight on material availability and current tariff impacts.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Section 3: Quotes Comparison -->
+<section class="py-16 lg:py-32 px-6 lg:px-12 bg-white">
+<div class="max-w-[1440px] mx-auto">
+<div class="text-center mb-12 lg:mb-20">
+<h2 class="text-3xl lg:text-4xl font-black tracking-tighter mb-4">Get multiple quotes from the best suppliers</h2>
+<p class="text-sm lg:text-base text-on-surface-variant">Vetted manufacturers competing for your project.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-4">
+<div class="bg-surface-bright p-6 lg:p-8 rounded-[10px] h-full">
+<img class="w-full aspect-square object-cover rounded-lg mb-6 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrQbz530I3qghgXPfE7vW1OUUxo12aodmUYNf27BEYXhJ28L20vXt_WB7clxVDOfUtkRRmwYekS_jdZQpUukXT0iTpcqTgmREhVmoDku-ps73pdROmub2x3W2mM1nebO5WYQrawbWueFsvIXwE7wu4H9pU9iMwLpBGyJ-sQFy-JRYV9jgl4coYVtZOJdM6O21iNkUqUotoqmagL5WTSM5_AuMkU7TN7VIccl1Bnxs5bPjvQKjV25jk2ZLrLKxWy810ArvXC-N9PX8Z"/>
+<h3 class="text-lg lg:text-xl font-bold mb-2">Blue Canvas Jacket</h3>
+<p class="text-xs lg:text-sm text-outline mb-4 lg:mb-6">Heavyweight industrial grade cotton canvas with reinforced stitching.</p>
+<div class="flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full w-fit">
+<span class="material-symbols-outlined text-[10px] lg:text-xs" data-icon="star" data-weight="fill">star</span>
+<span class="text-[8px] lg:text-[10px] font-bold uppercase tracking-widest">Top Pick Recommendation</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-8">
+<div class="space-y-4">
+<!-- Quote Card 1 -->
+<div class="bg-white p-5 lg:p-6 rounded-[10px] border border-surface-container flex items-center justify-between hover:shadow-lg transition-shadow">
+<div class="flex items-center gap-4 lg:gap-6">
+<div class="w-10 lg:w-12 h-10 lg:h-12 rounded-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe6Cr17-1dPoA__NCdgxJ6On1sEhq3GqSVITwUFh6ZP4eQ0Bcpij7pkIWzvUS4cTdB4NKoD0u0zweV0o6_JeOU1iD-ynP34OuS9EyJlf594oWW9m72Kr0AhsoCVytuUbr1fxI7EcrE_7Xh1Xp1ynwbS9KfB4PJvwQn9u5W42joDk-f1ohATEBGAkgD15jw5z3C2P4Kt-hyBgKc9QvOGibB7U-ky3lEDTYVcBcJ6JfIZbQ7Oon3TTbwjrS4nPDG6x566mQC5AVzAEvp"/>
+</div>
+<div>
+<h4 class="font-bold text-sm lg:text-base leading-tight">Angela, Industrial Textiles</h4>
+<p class="text-[10px] lg:text-xs text-outline">Surat • 98% Rating</p>
+</div>
+</div>
+<div class="text-right flex flex-col items-end gap-1 lg:gap-2">
+<span class="text-xl lg:text-2xl font-black text-primary">$42.50</span>
+<span class="text-[8px] lg:text-[10px] uppercase font-bold tracking-widest bg-surface-container px-2 py-0.5 lg:py-1 rounded">Per Unit</span>
+</div>
+</div>
+<!-- Quote Card 2 (Top Pick) -->
+<div class="bg-primary/5 p-5 lg:p-6 rounded-[10px] border-2 border-primary flex items-center justify-between relative">
+<div class="absolute -top-3 left-4 lg:left-6 bg-primary text-white text-[8px] lg:text-[10px] font-bold px-2 lg:px-3 py-1 rounded-full uppercase tracking-widest">Best Value</div>
+<div class="flex items-center gap-4 lg:gap-6">
+<div class="w-10 lg:w-12 h-10 lg:h-12 rounded-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ3pAyFOPnfhpvvymHbLJQH3hxi6LhmTRDcCR2CFdq7ulVJt3yjZhUsPJxkrQVVCDfpbRRTZolyj3WEKdvfcWJKHL23rxPZCw-08QkRwneeceB-AZ8THpdQhMJRJ18TFUnrxdNqgN0xpXLMG1pRVsMYXvptzQo3JRpJbPomYLzikQVmsgaZ0PMFgULh4Y70fCrrIVKQdkNvjM4t5n3hA31o8RgojAN7_y6Fp0VhFC6P4GRwhVMVy4yBBYKAjAhT0riP3-YEhtHNpTX"/>
+</div>
+<div>
+<h4 class="font-bold text-sm lg:text-base leading-tight">Frank, Master Weavers</h4>
+<p class="text-[10px] lg:text-xs text-outline">Jaipur • 99% Rating</p>
+</div>
+</div>
+<div class="text-right flex flex-col items-end gap-1 lg:gap-2">
+<span class="text-xl lg:text-2xl font-black text-primary">$38.90</span>
+<span class="text-[8px] lg:text-[10px] uppercase font-bold tracking-widest bg-primary text-white px-2 py-0.5 lg:py-1 rounded">Heavyweight Canvas</span>
+</div>
+</div>
+<!-- Quote Card 3 -->
+<div class="bg-white p-5 lg:p-6 rounded-[10px] border border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-4 lg:gap-6">
+<div class="w-10 lg:w-12 h-10 lg:h-12 rounded-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBD-70Jsx7uR0X4GONPXBle8JRpGGFMRt3lcN83oQxyBdlqlbWxrK7NzZTOBiSjVqM9xtfKiYdHlB3pFrDhITJHCetW2hPCofmpRQdCyj62rQtYcxTImUpzUzccpcj7vMihXCc3zL2sXsH770wdFXuGKBe06KS8Ohqtio8OvwW3GZy3S8U4f86uDvxYZxI8Dv5DeAOq-AK1u2K7u7pfBMX-f__k2J21vT5DevBLX7ouPTBaDmCUCMydp3ayITyV45hyPunvs6nI-Ic"/>
+</div>
+<div>
+<h4 class="font-bold text-sm lg:text-base leading-tight">Jason, Global Logistics</h4>
+<p class="text-[10px] lg:text-xs text-outline">Nasik • 95% Rating</p>
+</div>
+</div>
+<div class="text-right flex flex-col items-end gap-1 lg:gap-2">
+<span class="text-xl lg:text-2xl font-black text-primary">$41.00</span>
+<span class="text-[8px] lg:text-[10px] uppercase font-bold tracking-widest bg-surface-container px-2 py-0.5 lg:py-1 rounded">Per Unit</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Onsite QA & Delivery -->
+<section class="py-16 lg:py-32 px-6 lg:px-12 bg-surface-bright">
+<div class="max-w-[1440px] mx-auto flex flex-col items-center">
+<div class="max-w-3xl text-center mb-12 lg:mb-24">
+<h2 class="text-3xl lg:text-4xl font-black tracking-tighter mb-4 lg:mb-6">Onsite QA and delivery handled for you</h2>
+<p class="text-sm lg:text-lg text-on-surface-variant leading-relaxed">We don't just find the supplier. We oversee the entire production cycle with our boots-on-the-ground inspection network.</p>
+</div>
+<div class="w-full relative">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12 relative z-10">
+<!-- Step 1 -->
+<div class="flex flex-col items-center md:items-start text-center md:text-left bg-white md:bg-transparent p-6 md:p-0 rounded-xl md:rounded-none shadow-sm md:shadow-none">
+<div class="w-12 h-12 rounded-full bg-primary-container text-white flex items-center justify-center mb-4 lg:mb-6 ring-8 ring-background">
+<span class="material-symbols-outlined text-xl" data-icon="request_quote">request_quote</span>
+</div>
+<h4 class="font-bold text-base lg:text-lg mb-1 lg:mb-2">Sample requested</h4>
+<p class="text-xs lg:text-sm text-outline leading-relaxed">Material specs confirmed. Prototype production initiated in our Vietnam facility.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center md:items-start text-center md:text-left bg-white md:bg-transparent p-6 md:p-0 rounded-xl md:rounded-none shadow-sm md:shadow-none">
+<div class="w-12 h-12 rounded-full bg-primary-container text-white flex items-center justify-center mb-4 lg:mb-6 ring-8 ring-background">
+<span class="material-symbols-outlined text-xl" data-icon="payments">payments</span>
+</div>
+<h4 class="font-bold text-base lg:text-lg mb-1 lg:mb-2">Payment completed</h4>
+<p class="text-xs lg:text-sm text-outline leading-relaxed">Secure escrow financing finalized. Material procurement has begun.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center md:items-start text-center md:text-left bg-white md:bg-transparent p-6 md:p-0 rounded-xl md:rounded-none shadow-sm md:shadow-none">
+<div class="w-12 h-12 rounded-full bg-primary-container text-white flex items-center justify-center mb-4 lg:mb-6 ring-8 ring-background">
+<span class="material-symbols-outlined text-xl" data-icon="factory">factory</span>
+</div>
+<h4 class="font-bold text-base lg:text-lg mb-1 lg:mb-2">Production started</h4>
+<p class="text-xs lg:text-sm text-outline leading-relaxed">Cutting and assembly in progress. Real-time factory floor updates active.</p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center md:items-start text-center md:text-left bg-white md:bg-transparent p-6 md:p-0 rounded-xl md:rounded-none shadow-sm md:shadow-none">
+<div class="w-12 h-12 rounded-full bg-green-600 text-white flex items-center justify-center mb-4 lg:mb-6 ring-8 ring-background">
+<span class="material-symbols-outlined text-xl" data-icon="verified_user">verified_user</span>
+</div>
+<h4 class="font-bold text-base lg:text-lg mb-1 lg:mb-2">QA completed</h4>
+<p class="text-xs lg:text-sm text-outline leading-relaxed">On-site inspectors verified the shipment. Products cleared for global dispatch.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Order Samples -->
+<section class="py-16 lg:py-32 px-6 lg:px-12">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+<div class="lg:col-span-6">
+<h2 class="text-3xl lg:text-4xl font-black tracking-tighter mb-6 lg:mb-8 leading-tight">Order samples, pick a supplier,<br/>get better pricing</h2>
+<p class="text-base lg:text-lg text-on-surface-variant mb-10 lg:mb-12 leading-relaxed">No more guessing games. Order physical prototypes from multiple factories to verify weight, texture, and construction before committing to scale.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4 lg:gap-6 group">
+<div class="w-10 lg:w-12 h-10 lg:h-12 flex items-center justify-center rounded-full bg-surface-container group-hover:bg-primary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm lg:text-base" data-icon="science">science</span>
+</div>
+<p class="font-bold text-sm lg:text-base">Materials R&amp;D Support</p>
+</div>
+<div class="flex items-center gap-4 lg:gap-6 group">
+<div class="w-10 lg:w-12 h-10 lg:h-12 flex items-center justify-center rounded-full bg-surface-container group-hover:bg-primary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm lg:text-base" data-icon="travel_explore">travel_explore</span>
+</div>
+<p class="font-bold text-sm lg:text-base">Transparent Lead Times</p>
+</div>
+<div class="flex items-center gap-4 lg:gap-6 group">
+<div class="w-10 lg:w-12 h-10 lg:h-12 flex items-center justify-center rounded-full bg-surface-container group-hover:bg-primary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm lg:text-base" data-icon="account_balance">account_balance</span>
+</div>
+<p class="font-bold text-sm lg:text-base">Escrow Payment Security</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6">
+<div class="bg-white p-6 lg:p-10 rounded-[10px] shadow-[0px_40px_80px_rgba(15,0,218,0.08)] border border-surface-container">
+<div class="flex flex-col lg:flex-row justify-between items-start lg:items-start mb-8 lg:mb-10 gap-2">
+<div>
+<p class="text-[8px] lg:text-[10px] uppercase font-bold tracking-widest text-outline mb-1">Current Configuration</p>
+<h3 class="text-xl lg:text-2xl font-black">Industrial Heavy Jacket</h3>
+</div>
+<div class="lg:text-right">
+<p class="text-2xl lg:text-3xl font-black text-primary">$38.90</p>
+<p class="text-[8px] lg:text-xs text-outline">Unit Price (Estimated)</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3 lg:gap-4 mb-8 lg:mb-10">
+<div class="p-3 lg:p-4 bg-surface-container rounded-lg">
+<p class="text-[8px] lg:text-[10px] uppercase font-bold tracking-widest text-outline mb-1">Quantity</p>
+<p class="font-bold text-sm lg:text-base">1,000 Units</p>
+</div>
+<div class="p-3 lg:p-4 bg-surface-container rounded-lg">
+<p class="text-[8px] lg:text-[10px] uppercase font-bold tracking-widest text-outline mb-1">Supplier</p>
+<p class="font-bold text-sm lg:text-base">Frank's Master Weavers</p>
+</div>
+</div>
+<button class="w-full bg-primary-container text-white py-4 lg:py-6 rounded-full font-black text-base lg:text-lg shadow-xl hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2 lg:gap-3">
+<span class="material-symbols-outlined text-sm lg:text-base" data-icon="shopping_cart">shopping_cart</span>
+                        Buy sample for $149.00
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: Waitlist CTA -->
+<section class="py-16 lg:py-32 px-6 lg:px-12 bg-primary overflow-hidden relative">
+<div class="absolute inset-0 halftone-texture !opacity-10"></div>
+<div class="max-w-[1440px] mx-auto text-center relative z-10">
+<span class="text-on-primary-container font-black tracking-[0.2em] uppercase text-[10px] lg:text-sm mb-6 lg:mb-8 block">Limited Access</span>
+<h2 class="text-4xl lg:text-7xl font-black text-white tracking-tighter mb-8 lg:mb-10 leading-tight">
+                Join the <br/>Industrial Waitlist
+            </h2>
+<p class="text-sm lg:text-xl text-on-primary-container max-w-sm lg:max-w-2xl mx-auto mb-10 lg:mb-12 leading-relaxed">
+                We are selectively onboarding partners for the upcoming production cycle. Secure your place in the future of automated sourcing.
+            </p>
+<div class="flex flex-col md:flex-row justify-center items-center gap-3 lg:gap-4 max-w-sm lg:max-w-xl mx-auto">
+<input class="w-full bg-white text-on-background px-6 lg:px-8 py-4 lg:py-5 rounded-full text-sm lg:text-base font-medium focus:ring-4 ring-primary-container border-none outline-none" placeholder="Enter your business email" type="email"/>
+<button class="w-full md:w-auto bg-on-primary-fixed text-primary px-8 lg:px-10 py-4 lg:py-5 rounded-full font-black text-sm lg:text-base whitespace-nowrap hover:bg-white transition-colors">
+                    Get Priority Access
+                </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-100 dark:bg-zinc-900 w-full py-12 lg:py-20 mt-auto">
+<div class="flex flex-col lg:grid lg:grid-cols-2 gap-10 lg:gap-12 px-6 lg:px-12 max-w-[1440px] mx-auto">
+<div class="flex flex-col items-center lg:items-start text-center lg:text-left">
+<div class="flex items-center gap-2 lg:gap-3 mb-4 lg:mb-6">
+<img alt="Proquoment Logo" class="h-6 lg:h-8 w-auto rounded-sm" src="https://lh3.googleusercontent.com/aida/ADBb0uipVQU2CrFCa6h1XPrOE2cE_U3GNlC5e35oKMQ9jUdF71oIptAI21uZoqGs8IDr3MdJ4n2zejjSmACLFF8943_3ud29A0kyq8yHYcBmTMqQva3iQTvM9izzzdA0NUZkd00NcEmMP6v-TcxbJ70IqcxVz63sU_Y95qYEWUEvBqvsF0tDdzjBhsMG-H4oqtf7HummQrj0M1VTUHbmcBBq6jXNu2w9TwNPSMx46CjAfpUwXQM-qOZ1Ch6o45NHwxVN8rrO8X4j36SewJI"/>
+<span class="text-base lg:text-lg font-black text-[#070099] dark:text-blue-500 font-headline tracking-tighter">Proquoment</span>
+</div>
+<p class="text-[10px] lg:text-sm tracking-widest uppercase font-semibold text-zinc-500 dark:text-zinc-400 mb-6 lg:mb-8">
+                © 2026 Proquoment. All rights reserved
+            </p>
+<div class="flex gap-4">
+<div class="w-8 lg:w-10 h-8 lg:h-10 rounded-full bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center cursor-pointer hover:bg-primary transition-colors hover:text-white">
+<span class="material-symbols-outlined text-xs lg:text-sm" data-icon="language">language</span>
+</div>
+<div class="w-8 lg:w-10 h-8 lg:h-10 rounded-full bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center cursor-pointer hover:bg-primary transition-colors hover:text-white">
+<span class="material-symbols-outlined text-xs lg:text-sm" data-icon="share">share</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8 text-center lg:text-left">
+<div class="flex flex-col gap-3 lg:gap-4">
+<a class="text-[10px] lg:text-sm tracking-widest uppercase font-semibold text-zinc-500 dark:text-zinc-400 hover:text-blue-600 underline-offset-4 hover:underline transition-opacity" href="#">Privacy Policy</a>
+<a class="text-[10px] lg:text-sm tracking-widest uppercase font-semibold text-zinc-500 dark:text-zinc-400 hover:text-blue-600 underline-offset-4 hover:underline transition-opacity" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-3 lg:gap-4">
+<a class="text-[10px] lg:text-sm tracking-widest uppercase font-semibold text-zinc-500 dark:text-zinc-400 hover:text-blue-600 underline-offset-4 hover:underline transition-opacity" href="#">Industrial Manifesto</a>
+<a class="text-[10px] lg:text-sm tracking-widest uppercase font-semibold text-zinc-500 dark:text-zinc-400 hover:text-blue-600 underline-offset-4 hover:underline transition-opacity" href="#">Contact</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

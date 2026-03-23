@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Proquoment Website"
+version = "1.0.0"
+id = "artifacts/proquoment-website"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21673
+
+[services.development]
+run = "pnpm --filter @workspace/proquoment-website run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/proquoment-website", "run", "build" ]
+publicDir = "artifacts/proquoment-website/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21673"
+BASE_PATH = "/"
