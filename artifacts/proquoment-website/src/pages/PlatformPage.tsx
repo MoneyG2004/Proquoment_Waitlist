@@ -23,11 +23,11 @@ export default function PlatformPage() {
                   Join Waitlist
                 </button>
               </Link>
-              <Link href="/waitlist">
-                <button className="w-full sm:w-auto border border-[#c6c4d9] px-10 py-4 lg:py-5 rounded-full font-bold hover:bg-[#eeeeee] transition-colors">
+              <a href="https://calendly.com/rahull-goswamii2004" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <button className="w-full border border-[#c6c4d9] px-10 py-4 lg:py-5 rounded-full font-bold hover:bg-[#eeeeee] transition-colors">
                   Book a call
                 </button>
-              </Link>
+              </a>
             </div>
           </div>
           <div className="lg:col-span-6">

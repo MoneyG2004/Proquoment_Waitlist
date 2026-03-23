@@ -1,4 +1,11 @@
 export default function ContactPage() {
+  const socials = [
+    { icon: 'share', label: 'Professional', name: 'LinkedIn', url: 'https://www.linkedin.com/company/proquoment/about/' },
+    { icon: 'public', label: 'Announcements', name: 'Twitter', url: 'https://x.com/proquoment' },
+    { icon: 'camera_alt', label: 'Visual Log', name: 'Instagram', url: 'https://www.instagram.com/proquoment/' },
+    { icon: 'play_circle', label: 'Resources', name: 'YouTube', url: 'https://www.youtube.com/@Proquoment' },
+  ];
+
   return (
     <main className="pt-20 min-h-screen bg-[#f9f9f9]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -35,29 +42,32 @@ export default function ContactPage() {
           <h2 className="text-3xl font-black text-[#1a1c1c] mb-2">Ecosystem</h2>
           <div className="w-10 h-1 bg-[#060055] rounded-full mb-8"></div>
           <div className="grid grid-cols-2 gap-4 mb-4">
-            {[
-              { icon: 'share', label: 'Professional', name: 'LinkedIn' },
-              { icon: 'public', label: 'Announcements', name: 'Twitter' },
-              { icon: 'camera_alt', label: 'Visual Log', name: 'Instagram' },
-              { icon: 'play_circle', label: 'Resources', name: 'YouTube' },
-            ].map((item) => (
-              <button
+            {socials.map((item) => (
+              <a
                 key={item.name}
-                className="bg-[#f3f3f3] hover:bg-[#eeeeee] transition-colors rounded-[10px] p-6 text-left"
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#f3f3f3] hover:bg-[#eeeeee] transition-colors rounded-[10px] p-6 text-left block"
               >
                 <span className="material-symbols-outlined text-[#060055] mb-3 block text-2xl">{item.icon}</span>
                 <div className="text-[10px] font-bold text-slate-400 tracking-widest uppercase mb-1">{item.label}</div>
                 <div className="font-black text-[#1a1c1c] text-lg">{item.name}</div>
-              </button>
+              </a>
             ))}
           </div>
-          <button className="w-full rounded-[10px] p-6 text-left flex items-center justify-between bg-gradient-to-r from-[#060055] to-[#2d2dff] text-white hover:opacity-95 transition-opacity">
+          <a
+            href="https://calendly.com/rahull-goswamii2004"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full rounded-[10px] p-6 text-left flex items-center justify-between bg-gradient-to-r from-[#060055] to-[#2d2dff] text-white hover:opacity-95 transition-opacity block"
+          >
             <div>
               <div className="text-[10px] font-bold opacity-70 tracking-widest uppercase mb-1">Immediate Assistance</div>
               <div className="font-black text-xl">Book a Call</div>
             </div>
             <span className="material-symbols-outlined text-3xl">bolt</span>
-          </button>
+          </a>
         </div>
       </div>
     </main>
