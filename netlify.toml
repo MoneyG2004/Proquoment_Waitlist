@@ -1,11 +1,13 @@
 [build]
   command = "pnpm --filter @workspace/proquoment-website... run build"
-  publish = "artifacts/proquoment-website/dist"
+  publish = "artifacts/proquoment-website/dist/public"
 
 [build.environment]
   BASE_PATH = "/"
   PORT = "5173"
   NODE_ENV = "production"
+  NODE_VERSION = "22"
+  PNPM_VERSION = "10"
 
 [[redirects]]
   from = "/*"
