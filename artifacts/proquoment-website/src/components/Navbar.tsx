@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 
-const LOGO_URL = "https://lh3.googleusercontent.com/aida/ADBb0uipVQU2CrFCa6h1XPrOE2cE_U3GNlC5e35oKMQ9jUdF71oIptAI21uZoqGs8IDr3MdJ4n2zejjSmACLFF8943_3ud29A0kyq8yHYcBmTMqQva3iQTvM9izzzdA0NUZkd00NcEmMP6v-TcxbJ70IqcxVz63sU_Y95qYEWUEvBqvsF0tDdzjBhsMG-H4oqtf7HummQrj0M1VTUHbmcBBq6jXNu2w9TwNPSMx46CjAfpUwXQM-qOZ1Ch6o45NHwxVN8rrO8X4j36SewJI";
+const LOGO_URL = "/Logo.png";
 
 export default function Navbar() {
   const [location] = useLocation();
