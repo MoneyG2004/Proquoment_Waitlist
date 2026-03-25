@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { supabase } from "@/lib/supabase";
 
-const LOGO_URL = "https://lh3.googleusercontent.com/aida/ADBb0uipVQU2CrFCa6h1XPrOE2cE_U3GNlC5e35oKMQ9jUdF71oIptAI21uZoqGs8IDr3MdJ4n2zejjSmACLFF8943_3ud29A0kyq8yHYcBmTMqQva3iQTvM9izzzdA0NUZkd00NcEmMP6v-TcxbJ70IqcxVz63sU_Y95qYEWUEvBqvsF0tDdzjBhsMG-H4oqtf7HummQrj0M1VTUHbmcBBq6jXNu2w9TwNPSMx46CjAfpUwXQM-qOZ1Ch6o45NHwxVN8rrO8X4j36SewJI";
+const LOGO_URL = "/Logo.png";
 
 export default function WaitlistPage() {
   const [fullName, setFullName] = useState("");
@@ -221,7 +221,7 @@ export default function WaitlistPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col lg:flex-row justify-between items-center lg:items-center gap-8 text-center lg:text-left">
           <div className="flex flex-col items-center lg:items-start">
             <div className="flex items-center gap-3 font-black text-[#1C1C5E] text-lg sm:text-xl mb-2">
-              <img alt="Proquoment Logo" className="h-6 w-6 sm:h-7 sm:w-7 object-contain rounded-sm" src={LOGO_URL} />
+              <img alt="Logo.png" className="h-6 w-6 sm:h-7 sm:w-7 object-contain rounded-sm" src={LOGO_URL} />
               <span className="tracking-[-0.05em]">Proquoment</span>
             </div>
             <p className="text-[10px] uppercase tracking-[0.1em] font-medium text-slate-500">© 2026 Proquoment. all rights reserved</p>
